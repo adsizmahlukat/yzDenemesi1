@@ -21,7 +21,6 @@ print(icerik)
 
 
 
-
 def guzel_sozcukler_iste(dosya_adi):
     try:
         with open(dosya_adi, "r", encoding="utf-8") as dosya:
@@ -55,6 +54,7 @@ cevaplar = {
 }
 
 import toplamaIslemi
+import cıkartmaIslemi
 
 def sohbet_botu():
     # 1. Önce veritabanını (sözlüğü) yüklüyoruz.
@@ -71,9 +71,14 @@ def sohbet_botu():
             print("Görüşürüz!")
             break
 
-        if "topla" in mesaj or "toplama işemi yapmak istiyorum" in mesaj:
+        if "topla" in mesaj or "toplama işlemi yapmak istiyorum" in mesaj:
             print("Elbette!")
             toplamaIslemi.toplamaIslemi()
+            continue
+
+        if "cıkar" in mesaj or "çıkarma işlemi yapmak istiyorum" in mesaj:
+            print("Elbette!")
+            cıkartmaIslemi.cikarmaIslemi()
             continue
 
         #KONTROL NOKTASI

@@ -1,6 +1,6 @@
 def toplamaIslemi():
 
-    adet = int(input("Toplanacak Veri Miktarını giriniz: "))
+    adet = float(input("Toplanacak Veri Miktarını giriniz: "))
 
     toplam = 0
     for i in range(adet):
