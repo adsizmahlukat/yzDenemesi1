@@ -1,4 +1,4 @@
-selam, merhaba, hey, seni görmek ne güzel, hoş geldin, sefalar getirdin, günaydın, hayırlı sabahlar, iyi akşamlar, iyi geceler|SELAMLAMA
+selam, merhaba, hey, seni görmek ne güzel, hoş geldin, sefalar getirdin, günaydın, hayırlı sabahlar, iyi akşamlar, iyi geceler, hoş buldum|SELAMLAMA
 teşekkür ederim, teşekkürler, çok sağ ol, sağ ol, minnettarım, emeğine sağlık, eline emeğine sağlık, içten teşekkürler, gönülden sevgiler, kocaman teşekkürler, sonsuz minnet|TEŞEKKÜR
 iyi ki varsın, iyi ki hayatımdasın, iyi ki tanımışım seni, iyi ki yollarımız kesişmiş, sen gerçekten özelsin, sen değerlisin, kıymetlisin, kalbimde özel bir yerin var|KIYMET_VERME
 gülüşün içimi ısıtıyor, enerjin çok güzel, pozitifliğin bulaşıcı, samimiyetin içimi ısıtıyor, sesin huzur veriyor, varlığın huzur veriyor, varlığın güç veriyor|HİS_PAYLAŞIMI
