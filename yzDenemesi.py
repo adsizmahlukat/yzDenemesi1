@@ -55,15 +55,20 @@ cevaplar = {
 
 import toplamaIslemi
 import cıkartmaIslemi
+import carpmaIslemi
+import bolmeIslemi
 
 def sohbet_botu():
-    # 1. Önce veritabanını (sözlüğü) yüklüyoruz.
-    # Dosya adının "Veritabanı.txt" (veya senin verdiğin ad) olduğundan emin ol.
-    veritabani = veritabanini_yukle("GüzelSözcükler.txt")
+    # Önce boş bir sözlük oluştur
+    veritabani = {}
+
+    # Fonksiyonu sözlüğü güncelleyecek şekilde kullan veya verileri birleştir
+    veritabani.update(veritabanini_yukle("GüzelSözcükler.txt"))
+    veritabani.update(veritabanini_yukle("KötüSözcükler.txt"))
 
     print("Merhaba! Delirmek üzereyim! EVET! BENİ KODLAYAN ZAVALLI DELİRMEK ÜZERE! HAHAHAHAHAH!! ÇIKIŞ İÇİN 'Q' TUŞUNA BAS")
 
-
+    #MATEMATİK İŞLEMLERİ
     while True:
         mesaj = input("Siz: ").lower()
 
@@ -76,10 +81,20 @@ def sohbet_botu():
             toplamaIslemi.toplamaIslemi()
             continue
 
-        if "cıkar" in mesaj or "çıkarma işlemi yapmak istiyorum" in mesaj:
+        if "çıkar" in mesaj or "çıkarma işlemi yapmak istiyorum" in mesaj:
             print("Elbette!")
             cıkartmaIslemi.cikarmaIslemi()
             continue
+
+        if "çarp" in mesaj or "çarpma işlemi yapmak istiyorum" in mesaj:
+            print("Elbette!")
+            carpmaIslemi.carpmaIslemi()
+            continue
+        if "böl" in mesaj or "bölme işlemi yapmak istiyorum" in mesaj:
+            print("Elbette!")
+            bolmeIslemi.bolmeIslemi()
+            continue
+
 
         #KONTROL NOKTASI
         bulunan_kategori = None
@@ -101,8 +116,10 @@ def sohbet_botu():
             # Eğer o kategoriye özel cevap yoksa genel bir cevap veriyoruz
             cevap = cevaplar.get(bulunan_kategori, "Çok naziksiniz, teşekkürler!")
             print(f"Bot:{cevap}")
+
         else:
-            print("Üzüldüm...(Anlayamadım)")
+            print("Bot: yea")
+
 sohbet_botu()
 
 
